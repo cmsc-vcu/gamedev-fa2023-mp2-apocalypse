@@ -7,26 +7,32 @@ public class PlayerControl : MonoBehaviour
 
     public Rigidbody2D rb;
     public float speed = 5;
+    public Animator anim;
+
+    Vector2 movement;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetAxis("Horizontal") < 0)
-        {
-            rb.velocity = Vector3.zero;
-        }
         
-        rb.AddForce(new Vector3(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0, 0));
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        rb.AddForce(new Vector3(0, Input.GetAxisRaw("Vertical") * speed * Time.deltaTime,0 ));*/
 
-        transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0, 0);
-        transform.position += new Vector3(0, Input.GetAxisRaw("Vertical") * speed * Time.deltaTime, 0);
+        
+        anim.SetFloat("Horizontal",movement.x);
+        //anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Speed", movement.sqrMagnitude);
+    }
 
+    private void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 }

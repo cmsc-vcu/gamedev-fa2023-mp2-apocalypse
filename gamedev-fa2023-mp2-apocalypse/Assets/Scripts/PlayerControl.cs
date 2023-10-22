@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour
         
         //checks if player is in open world scene and makes camera follow player if so
        
-        if (scene.name == "World")
+        if (scene.name == "Outside")
         {
             mainCam.transform.position = transform.position + new Vector3(0, 0, -10f);
         }
@@ -57,8 +57,8 @@ public class PlayerControl : MonoBehaviour
         {
             if (scene.name == "StartingRoom")
             {
-                SceneManager.LoadScene("World");
-            }else if (scene.name == "World")
+                SceneManager.LoadScene("Outside");
+            }else if (scene.name == "Outside")
             {
                 SceneManager.LoadScene("StartingRoom");
             }

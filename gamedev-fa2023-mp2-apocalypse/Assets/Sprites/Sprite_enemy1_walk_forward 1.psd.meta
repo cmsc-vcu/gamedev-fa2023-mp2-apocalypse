@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c2438db2fff62f49a3e087024299181
+guid: 1d643de1b25a5c445af2c3882d5c3c39
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_enemy1_walk_back_0
+      name: Sprite_enemy1_walk_forward 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc0243cdf9526894eaef916f95ced7fd
-      internalID: -1803255735
+      spriteID: 93a9618782f205e4185f0987f8cdad44
+      internalID: -1366913977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_enemy1_walk_back_1
+      name: Sprite_enemy1_walk_forward 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c434a2825f1c7ae4ebf41a9a9ec96934
-      internalID: 1441714502
+      spriteID: 0c65633fe6c530946885aaa93bf62915
+      internalID: 1483313059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_enemy1_walk_back_2
+      name: Sprite_enemy1_walk_forward 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54be31302d0824d42a65bb7c6c3fb3c5
-      internalID: 2000902615
+      spriteID: 2c0df691c648a4b4e84165d042cf0cb2
+      internalID: -1390001452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_enemy1_walk_back_3
+      name: Sprite_enemy1_walk_forward 1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ed0e80311615834ca97cad9cb57bb25
-      internalID: 1346221409
+      spriteID: 5dd566c9662d6404f8f59eef61f13a4e
+      internalID: -2080413726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_enemy1_walk_back_4
+      name: Sprite_enemy1_walk_forward 1_4
       rect:
         serializedVersion: 2
         x: 128
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76eeba09d55375e4da925ea471599381
-      internalID: 330397872
+      spriteID: 2ca68fc1fc580c842b9bd64b73748a56
+      internalID: -1586785424
       vertices: []
       indices: 
       edges: []
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_enemy1_walk_back_0: -1803255735
-      Sprite_enemy1_walk_back_1: 1441714502
-      Sprite_enemy1_walk_back_2: 2000902615
-      Sprite_enemy1_walk_back_3: 1346221409
-      Sprite_enemy1_walk_back_4: 330397872
+      Sprite_enemy1_walk_forward 1_0: -1366913977
+      Sprite_enemy1_walk_forward 1_1: 1483313059
+      Sprite_enemy1_walk_forward 1_2: -1390001452
+      Sprite_enemy1_walk_forward 1_3: -2080413726
+      Sprite_enemy1_walk_forward 1_4: -1586785424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

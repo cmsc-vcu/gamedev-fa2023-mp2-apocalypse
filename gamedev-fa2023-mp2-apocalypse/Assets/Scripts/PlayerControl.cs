@@ -13,6 +13,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject mainCam;
 
     Scene scene;
+    
+    public EnemyControl enemyControl;
 
     Vector2 movement;
     // Start is called before the first frame update
@@ -21,7 +23,7 @@ public class PlayerControl : MonoBehaviour
         
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        exit = GameObject.FindWithTag("Exit").GetComponent<Collider2D>();
+        
 
     }
 
@@ -53,16 +55,18 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision = exit) 
+        if (collision.tag == "Exit")
         {
             if (scene.name == "StartingRoom")
             {
                 SceneManager.LoadScene("Outside");
-            }else if (scene.name == "Outside")
+            }
+            else if (scene.name == "Outside")
             {
                 SceneManager.LoadScene("StartingRoom");
             }
-            
+
         }
+        
     }
 }

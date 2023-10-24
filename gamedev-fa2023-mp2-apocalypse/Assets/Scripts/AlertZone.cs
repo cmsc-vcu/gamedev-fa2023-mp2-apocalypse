@@ -8,9 +8,10 @@ public class AlertZone : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && enemyControl.alerted == false)
         {
             enemyControl.alerted = true;
+            
         }
     }
 }

@@ -6129,18 +6129,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04133272, y: 0.058428407}
+  m_Offset: {x: 0, y: 0.058428347}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 0.32, y: 0.64}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3510742, y: 2.7967498}
+  m_Size: {x: 0.91006815, y: 1.082583}
   m_EdgeRadius: 0
 --- !u!70 &1114245309
 CapsuleCollider2D:
@@ -6175,7 +6175,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.36464795, y: 0.72929597}
   m_Direction: 0
 --- !u!212 &1114245310
 SpriteRenderer:
@@ -6217,9 +6217,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.38892844, g: 0.73005766, b: 0.8679245, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 452a6df846cac44b2a539300d9577a5a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6238,9 +6238,9 @@ Transform:
   m_GameObject: {fileID: 1114245307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9133, y: 0.04, z: 0}
-  m_LocalScale: {x: 1.6276, y: 1.6276, z: 1.6276}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 4.4, y: -0.11, z: 0}
+  m_LocalScale: {x: 4.8623123, y: 4.8623123, z: 4.8623123}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6263,8 +6263,8 @@ MonoBehaviour:
   - I need you to do something for me.
   - I want to surprise your little sister for her birthday.
   - So I'm making her favorite dessert!
-  - Can you please collect some berries for me? There's some wild juniperberry bushes
-    up a little ways north.
+  - Can you please collect some berries for me? There's some wild juniperberries
+    up north.
   - Be careful.
   contButton: {fileID: 2033878612}
   wordSpeed: 0.03
@@ -6833,11 +6833,14 @@ MonoBehaviour:
   canGetHit: 0
   canMove: 0
   hearts: []
+  enemies: []
+  enemyCount: 0
   health: 0
   simpleFlash: {fileID: 0}
   dialogueBox1: {fileID: 0}
   dialogueBox2: {fileID: 0}
   dialogueBox3: {fileID: 0}
+  victoryDialogue: {fileID: 0}
 --- !u!95 &1487174050
 Animator:
   serializedVersion: 5

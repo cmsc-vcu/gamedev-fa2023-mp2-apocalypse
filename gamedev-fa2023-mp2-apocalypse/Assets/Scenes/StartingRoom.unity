@@ -5500,22 +5500,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b50218ca1c3374047bdc01146e0da4dc, type: 3}
     m_FontSize: 300
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -6091,7 +6091,7 @@ GameObject:
   - component: {fileID: 1114245308}
   - component: {fileID: 1114245312}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Mom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6261,6 +6261,11 @@ MonoBehaviour:
   dialogue:
   - Morning.
   - I need you to do something for me.
+  - I want to surprise your little sister for her birthday.
+  - So I'm making her favorite dessert!
+  - Can you please collect some berries for me? There's some wild juniperberry bushes
+    up a little ways north.
+  - Be careful.
   contButton: {fileID: 2033878612}
   wordSpeed: 0.03
   playerIsClose: 0
@@ -6352,15 +6357,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.85882354}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c0f52cda3c850cf44b32e309e6a339b7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6449,14 +6454,14 @@ RectTransform:
   m_GameObject: {fileID: 1426380959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7867066, y: 0.8971216, z: 1.1041497}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1378517241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3091, y: 1142}
+  m_AnchoredPosition: {x: -3142, y: 1083}
   m_SizeDelta: {x: 1784.8, y: 499.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426380961
@@ -6480,9 +6485,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b50218ca1c3374047bdc01146e0da4dc, type: 3}
     m_FontSize: 300
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -6492,7 +6497,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NPC name
+  m_Text: Mom
 --- !u!222 &1426380962
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6823,7 +6828,16 @@ MonoBehaviour:
   anim: {fileID: 0}
   exit: {fileID: 161112538}
   mainCam: {fileID: 974834983}
-  enemyControl: {fileID: 0}
+  rightAttack: {fileID: 0}
+  leftAttack: {fileID: 0}
+  canGetHit: 0
+  canMove: 0
+  hearts: []
+  health: 0
+  simpleFlash: {fileID: 0}
+  dialogueBox1: {fileID: 0}
+  dialogueBox2: {fileID: 0}
+  dialogueBox3: {fileID: 0}
 --- !u!95 &1487174050
 Animator:
   serializedVersion: 5
@@ -6904,8 +6918,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9f1d5aeccc6be422191c5f1534e19180, type: 2}
+  m_sharedMaterial: {fileID: 6226877331917996528, guid: 9f1d5aeccc6be422191c5f1534e19180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7015,7 +7029,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3349.3, y: -1512.6}
+  m_AnchoredPosition: {x: 3160, y: -1185}
   m_SizeDelta: {x: 8000, y: 3000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033878614
@@ -7087,7 +7101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6724368, g: 0.6765577, b: 0.6886792, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

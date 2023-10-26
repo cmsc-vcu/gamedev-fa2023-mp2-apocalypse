@@ -27,6 +27,11 @@ public class PlayerControl : MonoBehaviour
 
 
     Scene scene;
+
+    public GameObject dialogueBox1;
+    public GameObject dialogueBox2;
+    public GameObject dialogueBox3;
+
     
     
 
@@ -110,6 +115,17 @@ public class PlayerControl : MonoBehaviour
             else if (scene.name == "Outside")
             {
                 SceneManager.LoadScene("StartingRoom");
+            }else if (collision.tag == "dialogue1")
+            {
+                dialogueBox1.SetActive(true);
+            }
+            else if (collision.tag == "dialogue2")
+            {
+                dialogueBox2.SetActive(true);
+            }
+            else if (collision.tag == "dialogue3")
+            {
+                dialogueBox3.SetActive(true);
             }
 
         }

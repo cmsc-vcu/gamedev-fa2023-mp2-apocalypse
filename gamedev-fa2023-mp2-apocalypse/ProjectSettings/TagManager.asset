@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - AlertZone
   - Attack
+  - dialogue1
+  - dialogue2
+  - dialogue3
   layers:
   - Default
   - TransparentFX

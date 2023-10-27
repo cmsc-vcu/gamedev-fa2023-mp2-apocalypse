@@ -54,4 +54,12 @@ public class TextAnim : MonoBehaviour
 
         }
     }
+    //
+    IEnumerator NextScene()
+    {
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene('Victory');
+    }
+
 }
+

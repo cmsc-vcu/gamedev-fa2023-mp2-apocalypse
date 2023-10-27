@@ -33,12 +33,12 @@ public class Monologue : MonoBehaviour
                 StartCoroutine(Typing());
             }
 
-        }
+        }*/
 
         if (dialogueText.text == dialogue[index])
         {
             contButton.SetActive(true);
-        }*/
+        }
     }
 
     public void zeroText()

@@ -6192,7 +6192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0efdd2acfc9e9c946ad5b9d58f0f21e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6815,7 +6815,6 @@ MonoBehaviour:
   dialogueBox1: {fileID: 0}
   dialogueBox2: {fileID: 0}
   dialogueBox3: {fileID: 0}
-  victoryDialogue: {fileID: 0}
 --- !u!95 &1487174050
 Animator:
   serializedVersion: 5

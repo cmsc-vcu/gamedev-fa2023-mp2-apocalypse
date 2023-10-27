@@ -30,14 +30,6 @@ public class PlayerControl : MonoBehaviour
 
     Scene scene;
 
-    public GameObject dialogueBox1;
-    public GameObject dialogueBox2;
-    public GameObject dialogueBox3;
-    public GameObject victoryDialogue;
-
-    
-    
-
     Vector2 movement;
     // Start is called before the first frame update
     void Start()
@@ -70,8 +62,8 @@ public class PlayerControl : MonoBehaviour
             leftAttack.transform.position = transform.position + new Vector3(-attackDisplacement, 0, 0);
             if (enemyCount == 0)
             {
-                victoryDialogue.SetActive(true);
-                //Debug.Log("enemies defeated");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
             }
         }
         
@@ -129,7 +121,7 @@ public class PlayerControl : MonoBehaviour
             else if (scene.name == "Outside")
             {
                 SceneManager.LoadScene("StartingRoom");
-            }else if (collision.tag == "dialogue1")
+            }/*else if (collision.tag == "dialogue1")
             {
                 dialogueBox1.SetActive(true);
             }
@@ -140,7 +132,7 @@ public class PlayerControl : MonoBehaviour
             else if (collision.tag == "dialogue3")
             {
                 dialogueBox3.SetActive(true);
-            }
+            }*/
 
         }
         

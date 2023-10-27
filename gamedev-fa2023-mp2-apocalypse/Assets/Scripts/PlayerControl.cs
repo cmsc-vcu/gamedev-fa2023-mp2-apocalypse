@@ -94,9 +94,11 @@ public class PlayerControl : MonoBehaviour
             if (movement.x >= 0) 
             {
                 rightAttack.SetActive(true);
+                anim.SetTrigger("RAttack");
             }else if (movement.x < 0) 
             {
                 leftAttack.SetActive(true);
+                anim.SetTrigger("LAttack");
             }
             canAttack = false;
             StartCoroutine(AttackDuration());

@@ -23,9 +23,14 @@ public class GoToNextScene : MonoBehaviour
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
-    public void Reset()
+    public void Retry()
     {
         SceneManager.LoadScene("Outside");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("StartingRoom");
     }
 
 }

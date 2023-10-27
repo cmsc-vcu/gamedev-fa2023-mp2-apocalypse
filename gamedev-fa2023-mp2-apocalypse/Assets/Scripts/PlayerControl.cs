@@ -20,6 +20,8 @@ public class PlayerControl : MonoBehaviour
     public bool canMove;
 
     public GameObject[] hearts;
+    public GameObject[] enemies;
+    public int enemyCount;
     
     public int health;
 
@@ -31,6 +33,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject dialogueBox1;
     public GameObject dialogueBox2;
     public GameObject dialogueBox3;
+    public GameObject victoryDialogue;
 
     
     
@@ -46,7 +49,10 @@ public class PlayerControl : MonoBehaviour
         canGetHit = true;
         canMove = true;
         health = 5;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemyCount = enemies.Length;
         
+
 
     }
 
@@ -62,6 +68,11 @@ public class PlayerControl : MonoBehaviour
         {
             rightAttack.transform.position = transform.position + new Vector3(attackDisplacement, 0, 0);
             leftAttack.transform.position = transform.position + new Vector3(-attackDisplacement, 0, 0);
+            if (enemyCount == 0)
+            {
+                victoryDialogue.SetActive(true);
+                //Debug.Log("enemies defeated");
+            }
         }
         
 

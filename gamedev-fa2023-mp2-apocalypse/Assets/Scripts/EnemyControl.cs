@@ -68,7 +68,9 @@ public class EnemyControl : MonoBehaviour
 
         if (health <= 0)
         {
+            playerControl.enemyCount -= 1;
             Destroy(gameObject);
+            
         }
     }
     IEnumerator BackAndForth()

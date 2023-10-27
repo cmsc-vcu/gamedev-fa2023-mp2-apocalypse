@@ -21,7 +21,7 @@ public class Monologue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerIsClose && Input.GetKeyDown(KeyCode.Space))
+       /* if (playerIsClose && Input.GetKeyDown(KeyCode.Space))
         {
             if (dialoguePanel.activeInHierarchy)
             {
@@ -38,7 +38,7 @@ public class Monologue : MonoBehaviour
         if (dialogueText.text == dialogue[index])
         {
             contButton.SetActive(true);
-        }
+        }*/
     }
 
     public void zeroText()
@@ -81,9 +81,24 @@ public class Monologue : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerIsClose = true;
+            if (dialoguePanel.activeInHierarchy)
+            {
+                zeroText();
+            }
+            else
+            {
+                dialoguePanel.SetActive(true);
+                StartCoroutine(Typing());
+            }
+
+        }
+
+        if (dialogueText.text == dialogue[index])
+        {
+            contButton.SetActive(true);
         }
     }
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {

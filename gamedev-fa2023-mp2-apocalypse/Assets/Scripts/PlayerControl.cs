@@ -18,7 +18,7 @@ public class PlayerControl : MonoBehaviour
     private bool canAttack;
     public bool canGetHit;
     public bool canMove;
-
+    private AudioSource attackSound;
     public GameObject[] hearts;
     public GameObject[] enemies;
     public int enemyCount;
@@ -51,7 +51,7 @@ public class PlayerControl : MonoBehaviour
         health = 5;
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         enemyCount = enemies.Length;
-        
+        attackSound = GetComponent<AudioSource>();
 
 
     }
@@ -102,6 +102,7 @@ public class PlayerControl : MonoBehaviour
             }
             canAttack = false;
             StartCoroutine(AttackDuration());
+            attackSound.Play();
         }
         if (health <= 0)
         {
